@@ -1,7 +1,10 @@
 const express = require('express');
 const { Pool } = require('pg');
+const cors = require('cors'); // Ajoutez cette ligne
 const app = express();
 const port = 3000;
+
+app.use(cors()); // Ajoutez cette ligne
 
 const pool = new Pool({
     user: 'user',
